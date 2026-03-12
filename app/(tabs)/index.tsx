@@ -69,15 +69,19 @@ export default function HomeScreen() {
         </View>
 
         {/* Our Best Offer */}
-        <View className="px-4 mb-6">
-          <View className="flex-row items-center justify-between mb-3">
+        <View className="mb-6">
+          <View className="px-4 flex-row items-center justify-between mb-3">
             <Text className="text-base font-semibold">Our Best Offer</Text>
             <Pressable>
               <Text className="text-blue-600 font-medium">See All</Text>
             </Pressable>
           </View>
           
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <ScrollView 
+            horizontal 
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{ paddingLeft: 16, paddingRight: 16 }}
+          >
             <VenueCard
               image={require('@/assets/images/background-01.png')}
               name="House Of Yuen"
@@ -101,6 +105,14 @@ export default function HomeScreen() {
               rating={4.5}
               reviews={2156}
               price="Rp.12.500.000/event"
+            />
+            <VenueCard
+              image={require('@/assets/images/background-01.png')}
+              name="Royal Elegance Hall"
+              location="Jakarta Barat, Jakarta"
+              rating={4.8}
+              reviews={5892}
+              price="Rp.15.750.000/event"
             />
           </ScrollView>
         </View>

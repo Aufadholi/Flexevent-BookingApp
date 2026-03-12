@@ -14,7 +14,7 @@ export default function ProfileScreen() {
   };
 
   const menuItems = [
-    { icon: 'person-outline', label: 'Edit Profile', route: '/profile/edit' },
+    { icon: 'person-outline', label: 'My Profile', route: '/profile/edit' },
     { icon: 'settings-outline', label: 'Settings', route: '/settings' },
     { icon: 'help-circle-outline', label: 'Help & Support', route: '/help' },
     { icon: 'information-circle-outline', label: 'About', route: '/about' },
