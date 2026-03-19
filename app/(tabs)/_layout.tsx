@@ -1,24 +1,14 @@
 import { Ionicons } from "@expo/vector-icons";
+import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Tabs } from "expo-router";
+import GlassTabBar from "../../components/GlassTabBar";
 
 export default function TabLayout() {
   return (
     <Tabs
+      tabBar={(props: BottomTabBarProps) => <GlassTabBar {...props} />}
       screenOptions={{
         headerShown: false,
-        tabBarStyle: {
-          backgroundColor: "#1F2937",
-          borderTopWidth: 0,
-          height: 60,
-          paddingBottom: 8,
-          paddingTop: 8,
-        },
-        tabBarActiveTintColor: "#FCD34D",
-        tabBarInactiveTintColor: "#9CA3AF",
-        tabBarLabelStyle: {
-          fontSize: 12,
-          fontWeight: "500",
-        },
       }}
     >
       <Tabs.Screen
@@ -26,11 +16,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ focused, color }) => (
-            <Ionicons
-              name={focused ? "home" : "home-outline"}
-              size={24}
-              color={color}
-            />
+            <Ionicons name={focused ? "home" : "home-outline"} size={24} color={color} />
           ),
         }}
       />
@@ -40,11 +26,7 @@ export default function TabLayout() {
         options={{
           title: "My Booking",
           tabBarIcon: ({ focused, color }) => (
-            <Ionicons
-              name={focused ? "calendar" : "calendar-outline"}
-              size={24}
-              color={color}
-            />
+            <Ionicons name={focused ? "calendar" : "calendar-outline"} size={24} color={color} />
           ),
         }}
       />
@@ -54,11 +36,7 @@ export default function TabLayout() {
         options={{
           title: "Message",
           tabBarIcon: ({ focused, color }) => (
-            <Ionicons
-              name={focused ? "chatbubbles" : "chatbubbles-outline"}
-              size={24}
-              color={color}
-            />
+            <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} size={24} color={color} />
           ),
         }}
       />
@@ -68,11 +46,7 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ focused, color }) => (
-            <Ionicons
-              name={focused ? "person-circle" : "person-circle-outline"}
-              size={24}
-              color={color}
-            />
+            <Ionicons name={focused ? "person-circle" : "person-circle-outline"} size={24} color={color} />
           ),
         }}
       />
